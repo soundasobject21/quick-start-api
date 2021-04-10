@@ -236,16 +236,16 @@ I've created a template that you can use to document information about your API.
 
 [⬇️ API Spec Template](https://docs.google.com/spreadsheets/d/1aokPioja67O47MOZi_Haebkh421ErVFZ602GePMZQQU/edit?usp=sharing)
 
-This data will help you communicate the following to anyone that wants to use your data:
+Documenting your API like this will help those that want to use your data, as it clearly states:
 
 - Your API_HOST
 - Which pins are being used
 - What types of inputs are connected to those pins (knob, sensor, button?)
-- What the min and max ranges are of the pins. This is important so users will know how to map data accurately.
+- What the min and max ranges are of the pins. This is important so users will know how to map/scale your data accurately.
 
 ## Retrieving someone else's data
 
-> If all you want to do is retrieve someone else's data, then you can completely ignore all of the steps in the [Making your data public](#making-your-data-public) section.
+> If all you want to do is retrieve someone else's data, then you can completely ignore all of the steps in the [Making your data public](#making-your-data-public) section. You just need to find a classmate that has an API ready and running when you are.
 
 To retrieve someone else's data, you will need:
 
