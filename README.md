@@ -3,14 +3,14 @@
 - [Requirements](#requirements)
 - [Making your data public](#making-your-data-public)
   - [1. Setup your Arduino](#1-setup-your-arduino)
-    - [🛠 Initial Arduino Setup](#-initial-arduino-setup)
-    - [▶️ Each time thereafter](#️-each-time-thereafter)
+    - [🛠 Initial Arduino Setup 🛠](#-initial-arduino-setup-)
+    - [▶️ Each time thereafter ▶️](#️-each-time-thereafter-️)
   - [2. Start your server and API service (`arduino-api-server`)](#2-start-your-server-and-api-service-arduino-api-server)
-    - [🛠 Initial `arduino-api-server` Setup](#-initial-arduino-api-server-setup)
-    - [▶️ Each time thereafter](#️-each-time-thereafter-1)
+    - [🛠 Initial `arduino-api-server` Setup 🛠](#-initial-arduino-api-server-setup-)
+    - [▶️ Each time thereafter ▶️](#️-each-time-thereafter-️-1)
   - [3. Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
-    - [🛠 Initial `arduino-serial-fetch` Setup](#-initial-arduino-serial-fetch-setup)
-    - [▶️ Each time thereafter](#️-each-time-thereafter-2)
+    - [🛠 Initial `arduino-serial-fetch` Setup 🛠](#-initial-arduino-serial-fetch-setup-)
+    - [▶️ Each time thereafter ▶️](#️-each-time-thereafter-️-2)
 - [Retrieving someone else's data](#retrieving-someone-elses-data)
 - [Template for sharing info about your API](#template-for-sharing-info-about-your-api)
 
@@ -25,9 +25,11 @@
 
 Three things are required for this to happen:
 
-1. Setup your arduino
-2. Start your server and API service (`arduino-api-server`)
-3. Start your serial message to API request converter (`arduino-serial-fetch`)
+1. [Setup your arduino](#1-setup-your-arduino)
+2. [Start your server and API service (`arduino-api-server`)](#2-start-your-server-and-api-service-arduino-api-server)
+3. [Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
+
+---
 
 ### 1. Setup your Arduino
 
@@ -40,7 +42,7 @@ Three things are required for this to happen:
 
 Check the [api-serial-fetch](https://github.com/soundasobject21/arduino-serial-fetch#arduino-code-and-serialprint-format) documentation for detailed information on how to write a program that does this, or for some boilerplate code.
 
-#### 🛠 Initial Arduino Setup
+#### 🛠 Initial Arduino Setup 🛠
 
 1. Upload the correct code to your Arduino (see https://github.com/soundasobject21/arduino-serial-fetch#arduino-code-and-serialprint-format)
 2. Make a note of the port name you use for your Arduino (i.e. `/dev/cu.SLAB_USBtoUART`)
@@ -48,17 +50,19 @@ Check the [api-serial-fetch](https://github.com/soundasobject21/arduino-serial-f
 4. **Close the Arduino IDE Serial Monitor** to free up the serial port
 5. Keep the arduino plugged in
 
-#### ▶️ Each time thereafter
+#### ▶️ Each time thereafter ▶️
 
 Once you have done the initial setup, and you haven't changed the code or circuit on your arduino since, all you need to do next time is:
 
 1. Plug in the arduino
 
+---
+
 ### 2. Start your server and API service (`arduino-api-server`)
 
 **🤔 Why? 🤔** Before you can make your data publicly available, you need to first set up a server to store that data and provide an API service that will allow you and others to update and retrieve that data.
 
-#### 🛠 Initial `arduino-api-server` Setup
+#### 🛠 Initial `arduino-api-server` Setup 🛠
 
 1. Download the repo and unzip the file: [⬇️ arduino-api-server main.zip](https://github.com/soundasobject21/arduino-api-server/archive/refs/heads/main.zip)
    > For detailed instructions on this repository, please read the [`arduino-api-server` documentation](https://github.com/soundasobject21/arduino-api-server)
@@ -133,7 +137,7 @@ Once you have done the initial setup, and you haven't changed the code or circui
 
 9. To stop the server, use ctrl-c (`^C`) in the terminal/command line window where it is running.
 
-#### ▶️ Each time thereafter
+#### ▶️ Each time thereafter ▶️
 
 Once you've done the initial setup for `arduino-api-server`, all you need to do to start the server again is:
 
@@ -151,11 +155,13 @@ Once you've done the initial setup for `arduino-api-server`, all you need to do 
 
 3.  To stop the server, use ctrl-c (`^C`) in the terminal/command line window where it is running.
 
+---
+
 ### 3. Start your serial message to API request converter (`arduino-serial-fetch`)
 
 **🤔 Why? 🤔** In the previous step, you set up a server that can store data, so now we need a way to convert our serial messages to API requests which will then update the data on the server.
 
-#### 🛠 Initial `arduino-serial-fetch` Setup
+#### 🛠 Initial `arduino-serial-fetch` Setup 🛠
 
 1. Download the repo and unzip the file: [⬇️ arduino-serial-fetch main.zip](https://github.com/soundasobject21/arduino-serial-fetch)
    > For detailed information on this repository, please read the [`arduino-serial-fetch` documentation](https://github.com/soundasobject21/arduino-serial-fetch)
@@ -204,11 +210,11 @@ Once you've done the initial setup for `arduino-api-server`, all you need to do 
    ```
 9. To stop the app, use ctrl-c (`^C`) in the terminal/command line window where it is running.
 
-#### ▶️ Each time thereafter
+#### ▶️ Each time thereafter ▶️
 
 Once you've done the initial setup for `arduino-serial-fetch`, all you need to do to start the app again is:
 
-1. Make sure your Arduino is plugged in (see [Arduino setup](#️-each-time-thereafter))
+1. Make sure your Arduino is plugged in (see [Arduino setup](#️-each-time-thereafter-))
 
 2. Open a new terminal/command line window and make sure you're in the `arduino-serial-fetch` folder:
 
@@ -228,7 +234,7 @@ Once you've done the initial setup for `arduino-serial-fetch`, all you need to d
 
 To retrieve someone else's data, you will need:
 
-1. Their public `API_HOST` (should end in `.loca.lt`). This information can be found when the other party [starts their server](#️-each-time-thereafter-1)
+1. Their public `API_HOST` (should end in `.loca.lt`). This information can be found when the other party [starts their server](#️-each-time-thereafter--1)
 2. A program that will send API requests to retrieve data. A Processing template is available in our processing repo: [https://github.com/soundasobject21/processing/tree/main/ReadingFromAPI/template](https://github.com/soundasobject21/processing/tree/main/ReadingFromAPI/template). (You will need to download all three files and store them in a folder named `template`). Then open `template.pde` in Processing.
 
    If you are using the provided Processing template Be sure to update the `api_host` variable with the `API_HOST` that is provided to you by the other party.
