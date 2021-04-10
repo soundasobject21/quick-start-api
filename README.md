@@ -232,6 +232,8 @@ Once you've done the initial setup for `arduino-serial-fetch`, all you need to d
 
 ## Retrieving someone else's data
 
+> If all you want to do is retrieve someone else's data, then you can completely ignore all of the steps in the [Making your data public](#making-your-data-public) section.
+
 To retrieve someone else's data, you will need:
 
 1. Their public `API_HOST` (should end in `.loca.lt`). This information can be found when the other party [starts their server](#️-each-time-thereafter--1)
