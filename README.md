@@ -11,8 +11,8 @@
   - [3. Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
     - [🛠 Initial `arduino-serial-fetch` Setup 🛠](#-initial-arduino-serial-fetch-setup-)
     - [▶️ Each time thereafter ▶️](#️-each-time-thereafter-️-2)
+  - [Template for sharing info about your API](#template-for-sharing-info-about-your-api)
 - [Retrieving someone else's data](#retrieving-someone-elses-data)
-- [Template for sharing info about your API](#template-for-sharing-info-about-your-api)
 
 ## Requirements
 
@@ -230,6 +230,19 @@ Once you've done the initial setup for `arduino-serial-fetch`, all you need to d
 
 4. To stop the app, use ctrl-c (`^C`) in the terminal/command line window where it is running.
 
+### Template for sharing info about your API
+
+I've created a template that you can use to document information about your API. This will be useful to share with anyone that wants to access your data:
+
+[⬇️ API Spec Template](https://docs.google.com/spreadsheets/d/1aokPioja67O47MOZi_Haebkh421ErVFZ602GePMZQQU/edit?usp=sharing)
+
+This data will help you communicate the following to anyone that wants to use your data:
+
+- Your API_HOST
+- Which pins are being used
+- What types of inputs are connected to those pins (knob, sensor, button?)
+- What the min and max ranges are of the pins. This is important so users will know how to map data accurately.
+
 ## Retrieving someone else's data
 
 > If all you want to do is retrieve someone else's data, then you can completely ignore all of the steps in the [Making your data public](#making-your-data-public) section.
@@ -244,9 +257,3 @@ To retrieve someone else's data, you will need:
    All pin data is retrieved from the other party's server and stored in a `pins[]` array that can be used in the `draw()` loop.
 
 3. To use the other party's data effectively, you will also want [more information about the data they are sending](#template-for-sharing-info-about-your-api).
-
-## Template for sharing info about your API
-
-I've created a template that you can use to document information about your API. This will be useful to share with anyone that wants to access your data:
-
-[⬇️ API Info Template](https://docs.google.com/spreadsheets/d/1aokPioja67O47MOZi_Haebkh421ErVFZ602GePMZQQU/edit?usp=sharing)
