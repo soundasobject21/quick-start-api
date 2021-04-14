@@ -1,5 +1,7 @@
 # Quick Start for API setup
 
+**Table of Contents**
+
 - [Requirements](#requirements)
 - [Making your data public](#making-your-data-public)
   - [1. Setup your Arduino](#1-setup-your-arduino)
@@ -7,6 +9,10 @@
   - [3. Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
   - [Template for sharing info about your API](#template-for-sharing-info-about-your-api)
 - [Retrieving someone else's data](#retrieving-someone-elses-data)
+
+---
+
+---
 
 ## Requirements
 
@@ -15,17 +21,17 @@
 - [Node.js](https://nodejs.org/en/download/)
 - [Arduino](https://nodejs.org/en/download/) and [Processing](https://processing.org/download/) IDEs
 
+---
+
+---
+
 ## Making your data public
 
 Three things are required for this to happen:
 
-- [Requirements](#requirements)
-- [Making your data public](#making-your-data-public)
-  - [1. Setup your Arduino](#1-setup-your-arduino)
-  - [2. Start your server and API service (`arduino-api-server`)](#2-start-your-server-and-api-service-arduino-api-server)
-  - [3. Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
-  - [Template for sharing info about your API](#template-for-sharing-info-about-your-api)
-- [Retrieving someone else's data](#retrieving-someone-elses-data)
+1. [Setup your Arduino](#1-setup-your-arduino)
+2. [Start your server and API service (`arduino-api-server`)](#2-start-your-server-and-api-service-arduino-api-server)
+3. [Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
 
 ---
 
@@ -40,7 +46,7 @@ Three things are required for this to happen:
 
 Check the [api-serial-fetch](https://github.com/soundasobject21/arduino-serial-fetch#arduino-code-and-serialprint-format) documentation for detailed information on how to write a program that does this, or for some boilerplate code.
 
-#### 🛠 Initial Arduino Setup 🛠
+#### 🛠 Initial Arduino Setup
 
 1. Upload the correct code to your Arduino (see https://github.com/soundasobject21/arduino-serial-fetch#arduino-code-and-serialprint-format)
 2. Make a note of the port name you use for your Arduino (i.e. `/dev/cu.SLAB_USBtoUART`)
@@ -48,7 +54,7 @@ Check the [api-serial-fetch](https://github.com/soundasobject21/arduino-serial-f
 4. **Close the Arduino IDE Serial Monitor** to free up the serial port
 5. Keep the arduino plugged in
 
-#### ▶️ Each time thereafter ▶️
+#### ▶️ Each time thereafter
 
 Once you have done the initial setup, and you haven't changed the code or circuit on your arduino since, all you need to do next time is:
 
@@ -60,7 +66,7 @@ Once you have done the initial setup, and you haven't changed the code or circui
 
 **🤔 Why? 🤔** Before you can make your data publicly available, you need to first set up a server to store that data and provide an API service that will allow you and others to update and retrieve that data.
 
-#### 🛠 Initial `arduino-api-server` Setup 🛠
+#### 🛠 Initial `arduino-api-server` Setup
 
 1. Download the repo and unzip the file: [⬇️ arduino-api-server main.zip](https://github.com/soundasobject21/arduino-api-server/archive/refs/heads/main.zip)
    > For detailed instructions on this repository, please read the [`arduino-api-server` documentation](https://github.com/soundasobject21/arduino-api-server)
@@ -135,7 +141,7 @@ Once you have done the initial setup, and you haven't changed the code or circui
 
 9. To stop the server, use ctrl-c (`^C`) in the terminal/command line window where it is running.
 
-#### ▶️ Each time thereafter ▶️
+#### ▶️ Each time thereafter
 
 Once you've done the initial setup for `arduino-api-server`, all you need to do to start the server again is:
 
@@ -159,7 +165,7 @@ Once you've done the initial setup for `arduino-api-server`, all you need to do 
 
 **🤔 Why? 🤔** In the previous step, you set up a server that can store data, so now we need a way to convert our serial messages to API requests which will then update the data on the server.
 
-#### 🛠 Initial `arduino-serial-fetch` Setup 🛠
+#### 🛠 Initial `arduino-serial-fetch` Setup
 
 1. Download the repo and unzip the file: [⬇️ arduino-serial-fetch main.zip](https://github.com/soundasobject21/arduino-serial-fetch)
    > For detailed information on this repository, please read the [`arduino-serial-fetch` documentation](https://github.com/soundasobject21/arduino-serial-fetch)
@@ -208,7 +214,7 @@ Once you've done the initial setup for `arduino-api-server`, all you need to do 
    ```
 9. To stop the app, use ctrl-c (`^C`) in the terminal/command line window where it is running.
 
-#### ▶️ Each time thereafter ▶️
+#### ▶️ Each time thereafter
 
 Once you've done the initial setup for `arduino-serial-fetch`, all you need to do to start the app again is:
 
@@ -228,6 +234,8 @@ Once you've done the initial setup for `arduino-serial-fetch`, all you need to d
 
 4. To stop the app, use ctrl-c (`^C`) in the terminal/command line window where it is running.
 
+---
+
 ### Template for sharing info about your API
 
 I've created a template that you can use to document information about your API. This will be useful to share with anyone that wants to access your data:
@@ -240,6 +248,10 @@ Documenting your API like this will help those that want to use your data, as it
 - Which pins are being used
 - What types of inputs are connected to those pins (knob, sensor, button?)
 - What the min and max ranges are of the pins. This is important so users will know how to map/scale your data accurately.
+
+---
+
+---
 
 ## Retrieving someone else's data
 
