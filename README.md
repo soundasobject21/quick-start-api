@@ -3,14 +3,8 @@
 - [Requirements](#requirements)
 - [Making your data public](#making-your-data-public)
   - [1. Setup your Arduino](#1-setup-your-arduino)
-    - [🛠 Initial Arduino Setup 🛠](#-initial-arduino-setup-)
-    - [▶️ Each time thereafter ▶️](#️-each-time-thereafter-️)
   - [2. Start your server and API service (`arduino-api-server`)](#2-start-your-server-and-api-service-arduino-api-server)
-    - [🛠 Initial `arduino-api-server` Setup 🛠](#-initial-arduino-api-server-setup-)
-    - [▶️ Each time thereafter ▶️](#️-each-time-thereafter-️-1)
   - [3. Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
-    - [🛠 Initial `arduino-serial-fetch` Setup 🛠](#-initial-arduino-serial-fetch-setup-)
-    - [▶️ Each time thereafter ▶️](#️-each-time-thereafter-️-2)
   - [Template for sharing info about your API](#template-for-sharing-info-about-your-api)
 - [Retrieving someone else's data](#retrieving-someone-elses-data)
 
@@ -25,9 +19,13 @@
 
 Three things are required for this to happen:
 
-1. [Setup your arduino](#1-setup-your-arduino)
-2. [Start your server and API service (`arduino-api-server`)](#2-start-your-server-and-api-service-arduino-api-server)
-3. [Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
+- [Requirements](#requirements)
+- [Making your data public](#making-your-data-public)
+  - [1. Setup your Arduino](#1-setup-your-arduino)
+  - [2. Start your server and API service (`arduino-api-server`)](#2-start-your-server-and-api-service-arduino-api-server)
+  - [3. Start your serial message to API request converter (`arduino-serial-fetch`)](#3-start-your-serial-message-to-api-request-converter-arduino-serial-fetch)
+  - [Template for sharing info about your API](#template-for-sharing-info-about-your-api)
+- [Retrieving someone else's data](#retrieving-someone-elses-data)
 
 ---
 
